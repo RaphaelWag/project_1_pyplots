@@ -48,6 +48,7 @@ results_1000_special = np.loadtxt("results_special_tridiagonal1000.txt")
 results_10_lu = np.loadtxt("results_lu10.txt")
 results_100_lu = np.loadtxt("results_lu100.txt")
 results_1000_lu = np.loadtxt("results_lu1000.txt")
+
 # length of arrays
 
 size = int(len(data_general) / 3)
