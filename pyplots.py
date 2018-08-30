@@ -5,22 +5,30 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# definition of functions
+
+
+
+
 # read in files from cpp code
 
-data = np.loadtxt("err_time_general_tridiagonal.txt")
+data_general = np.loadtxt("err_time_general_tridiagonal.txt")
+data_lu = np.loadtxt("err_time_lu")
+
 
 # length of arrays
 
-size = int(len(data)/3)
+size = int(len(data_general) / 3)
+size_lu = 7
 
 points = np.zeros(shape=size)
 error = np.zeros(shape=size)
 runtime = np.zeros(shape=size)
 
 for i in range(size):
-    points[i] = np.log10(data[(i+1)*3-1])
-    error[i] = data[(i+1)*3-3]
-    runtime[i] = data[(i+1)*3-2]
+    points[i] = np.log10(data_general[(i + 1) * 3 - 1])
+    error[i] = data_general[(i + 1) * 3 - 3]
+    runtime[i] = data_general[(i + 1) * 3 - 2]
 
 print(points)
 print()
