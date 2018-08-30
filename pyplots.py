@@ -28,7 +28,7 @@ print(error)
 print()
 print(runtime)
 
-# generate plots
+# generate plots test
 
 f, (ax1, ax2) = plt.subplots(1, 2)
 ax1.plot(points, runtime)
